@@ -1,0 +1,211 @@
+@import 'tailwindcss';
+@plugin "@tailwindcss/forms";
+@plugin '@tailwindcss/typography';
+@source '../node_modules/pliny';
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Core theme configuration */
+@theme {
+  /* Font families */
+  --font-sans: var(--font-exo), ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+
+  /* Colors */
+  /* Copied from https://tailwindcss.com/docs/theme#default-theme-variable-reference */
+
+  --color-*: initial;
+  --color-sequim: #C1C5FF;
+  --color-ice: #AEB5C3;
+  --color-frost: #EBEEF5;
+  --color-black: #000;
+  --color-white: #fff;
+
+  /* Cool blue-gray scale anchored at ice (#AEB5C3) and frost (#EBEEF5) */
+  --color-gray-50: #f8f9fb;
+  --color-gray-100: #EBEEF5; /* frost */
+  --color-gray-200: #d0d5e4;
+  --color-gray-300: #b8c0d2;
+  --color-gray-400: #AEB5C3; /* ice */
+  --color-gray-500: #8891a5;
+  --color-gray-600: #636c82;
+  --color-gray-700: #444c60;
+  --color-gray-800: #282f40;
+  --color-gray-900: #141824;
+  --color-gray-950: #0a0e17;
+
+  /* Primary scale anchored at sequim (#C1C5FF) */
+  --color-primary-300: #d6d9ff;
+  --color-primary-400: #C1C5FF; /* sequim */
+  --color-primary-500: #a8adff;
+  --color-primary-600: #8b91ff;
+
+  /* Line heights */
+  --line-height-11: 2.75rem;
+  --line-height-12: 3rem;
+  --line-height-13: 3.25rem;
+  --line-height-14: 3.5rem;
+
+
+  /* Z-index values */
+  --z-60: 60;
+  --z-70: 70;
+  --z-80: 80;
+}
+
+/*
+  The default border color has changed to `currentColor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  html:not(.dark) body {
+    background-image: url('/static/images/lightmode.bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
+  html.dark body {
+    background-image: url('/static/images/darkmode.bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-sequim, currentColor);
+  }
+
+  a,
+  button {
+    outline-color: var(--color-sequim);
+  }
+
+  a:focus-visible,
+  button:focus-visible {
+    outline: 2px solid;
+    border-radius: var(--radius-sm);
+    outline-color: var(--color-black);
+  }
+
+  :where(.dark, .dark *),
+  :where(.dark, .dark *)::after,
+  :where(.dark, .dark *)::before,
+  :where(.dark, .dark *)::backdrop,
+  :where(.dark, .dark *)::file-selector-button {
+    border-color: var(--color-ice, currentColor);
+  }
+
+  :where(.dark, .dark *) a,
+  :where(.dark, .dark *) button {
+    outline-color: var(--color-ice);
+  }
+
+  :where(.dark, .dark *) a:focus-visible,
+  :where(.dark, .dark *) button:focus-visible {
+    outline-color: var(--color-frost);
+  }
+}
+
+@layer utilities {
+  .prose {
+    & a {
+      color: var(--color-black);
+      &:hover {
+        color: var(--color-sequim);
+      }
+      & code {
+        color: var(--color-sequim);
+      }
+    }
+    & :where(h1, h2) {
+      font-weight: 700;
+      letter-spacing: var(--tracking-tight);
+    }
+    & h3 {
+      font-weight: 600;
+    }
+    & :where(code):not(pre code) {
+      color: var(--color-black);
+    }
+  }
+
+  .prose-invert {
+    & a {
+      color: var(--color-sequim);
+      &:hover {
+        color: var(--color-frost);
+      }
+      & code {
+        color: var(--color-sequim);
+      }
+    }
+    & :where(h1, h2, h3, h4, h5, h6) {
+      color: var(--color-frost);
+    }
+  }
+}
+
+.task-list-item::before {
+  @apply hidden;
+}
+
+.task-list-item {
+  @apply list-none;
+}
+
+.footnotes {
+  @apply mt-12 border-t border-ice pt-8 dark:border-sequim;
+}
+
+.data-footnote-backref {
+  @apply no-underline;
+}
+
+.csl-entry {
+  @apply my-5;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* https://stackoverflow.com/questions/61083813/how-to-avoid-internal-autofill-selected-style-to-be-applied */
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  transition:
+    background-color 600000s 0s,
+    color 600000s 0s;
+}
+
+.katex-display {
+  overflow: auto hidden;
+}
+
+.content-header-link {
+  opacity: 0;
+  margin-left: -24px;
+  padding-right: 4px;
+}
+
+.content-header:hover .content-header-link,
+.content-header-link:hover {
+  opacity: 1;
+}
+
+.linkicon {
+  display: inline-block;
+  vertical-align: middle;
+}
