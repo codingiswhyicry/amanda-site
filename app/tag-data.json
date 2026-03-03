@@ -1,6 +1,14 @@
 {
+  "mental-health": 3,
+  "business": 1,
+  "startups": 3,
   "amanda-work": 11,
+  "tech-for-good": 3,
+  "software": 3,
+  "society": 1,
   "aviation": 1,
   "technology": 1,
-  "safety": 1
+  "safety": 1,
+  "surveillance": 1,
+  "nonprofits": 1
 }

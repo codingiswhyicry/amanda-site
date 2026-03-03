@@ -12,11 +12,23 @@ const CustomLink = ({ href, ...rest }: LinkProps & AnchorHTMLAttributes<HTMLAnch
   }
 
   if (isAnchorLink) {
-    return <a className="break-words" href={href} {...rest} />
+    return (
+      <>
+        <div className="justify-left flex items-center">
+          <img src="/static/images/4pointstar.svg" className="h-3 w-3 justify-center" />
+        </div>
+        return <a className="break-words" href={href} {...rest} />
+      </>
+    )
   }
 
   return (
-    <a className="break-words" target="_blank" rel="noopener noreferrer" href={href} {...rest} />
+    <>
+      <div className="justify-left flex items-center">
+        <img src="/static/images/4pointstar.svg" className="h-3 w-3 justify-center" />
+      </div>
+      <a className="break-words" target="_blank" rel="noopener noreferrer" href={href} {...rest} />
+    </>
   )
 }
 

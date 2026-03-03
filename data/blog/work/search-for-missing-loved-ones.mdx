@@ -1,0 +1,90 @@
+---
+title: 'building an app that helps people search for missing loved ones.'
+date: '2024-11-24'
+lastmod: '2024-11-24'
+tags: ['software', 'tech for good']
+draft: false
+summary: 'Searches for people are about time and how to best manage it: it’s not only the search process itself, but the passing of information, onboarding people, admin of social media, and so on. It’s a job on top of a job managing an incredibly stressful situation. But, there’s unique pieces of this puzzle that have yet to be meaningfully solved.'
+images: ['/static/images/twitter-card.png']
+---
+
+![](https://cdn-images-1.medium.com/max/800/1*mjBNbsZE3bBkw7m8nehuXQ.png)
+
+Me at the Grand Canyon, which is where I started thinking about this problem.
+
+Social media has undoubtedly changed so much in our world, but the primary way that sticks out to me is how **social media is given a second life as a missing person search network.**
+
+Surely, if you’re online — you’ve seen them. We get AMBER alerts, and now we also see posts from our local friends or city subreddits that show us people who are missing.
+
+The book, “Trail Of The Lost — The Quest To Bring Home The Missing Hikers of the PCT”, is what first made me truly consider building a tool for this. For two reasons: **social media is exceptional at spreading urgent, time sensitive messages to localized groups of people**. Secondarily, it’s exceptional at providing information from those people.
+
+“Trail of the Lost” is a unique book in the way it shows the modern process of searching for someone missing — yes, it’s calling out to people and combing through search areas. It’s also a lot of admin work.
+
+There’s paperwork, there’s leads to sort through, there’s mass amounts of information that can be generated and needs to be shared.
+
+There’s also power in numbers: family members in Mexico have united through social media to find mass graves of their loved ones, and to democratize information across family members dealing with corrupt systems.
+
+As someone who’s background is in building tools for people to deal with hard issues using technology (think mental illness management, security system for people going through abusive situations, helping homeowners upgrade their homes to survive natural disasters), I immediately came to realize something that could make this process easier. This is a different kind of post from me: not an essay, but just insights into how I think about software at different parts and hopefully where it falls into place over time.
+
+**Searches for people are about time and how to best manage it**: it’s not only the search process itself, but the passing of information, onboarding people, admin of social media, and so on. It’s a job on top of a job managing an incredibly stressful situation. But, there’s unique pieces of this puzzle that have yet to be meaningfully solved.
+
+---
+
+**#1 — State of now:**
+
+- There really is no tool right now that solves this problem effectively (as of early stage learning). Most are about people downloading apps that show them photos of missing kids they might know. The rest are focused primarily to SAR teams or law enforcement, not necessarily the people searching for someone.
+- There’s one app on the App Store that allows people to input their GPS co-ordinates to make sure searches are not overlapping. Seems banger.
+- Social media accounts bring a lot of information, but not all of it is correct or verifiable, and their leads require manual input and categorization by someone involved
+- Knitting together all information and co-ordinating across groups takes a lot of time and effort. Often, the primary sources repeat information & share photos and surface level information. Making this admin & organizing easier and more repeatable would be beneficial to the people involved.
+- Paperwork is incredibly hard to deal with. There’s lots of different information across counties, cities, states, etc. When someone goes missing, if they are spotted in a lot of places — it can become a federal or state issue. Often, the process of navigating the paperwork is hard and not clear, leading to additional stress or delays in completing the search.
+- Drone imagery is quickly becoming game-changing. However, it’s incredibly hard to put into practice. The National Park Service has a huge ban on drones, so they are rarely allowed to fly, even in areas that have optimal conditions for it and for SAR reasons. The best conditions are unforested areas.
+- When drones are finished, they can provide a substantial amount of imagery that needs to be visually determined by a human. ML models are not good at separating bones from rock, or other fragments. This is a huge data / resource problem that could be a potential avenue towards creating better outcomes, but the adoption of drones in SARs is not clear (although it has been incredibly beneficial).
+- [TraceLabs](https://www.tracelabs.org/) has a platform where hackers use Open Source Intelligence anto find missing people. This is a great tool, but not for direct use by people who have loved ones.
+
+---
+
+**#2 — Areas of improvement:**
+
+- Connecting someone’s social media accounts or posts to a lead generation & event mapping tool could automate the process of going from A -> C. Really, it’s about automating the process to increase the time spent doing more beneficial things.
+- Providing reliability scores for leads from users based on their social media account age, location, and history would be potentially beneficial in determining who is providing false information. Could also add extra filters on top of the page to remove hate comments or otherwise upsetting material on top of the SM’s moderation.
+- Event mapping & documentation storage would be incredibly beneficial in onboarding and co-ordinating multiple parties. These should be as portable as possible to 3rd party systems, meaning we utilize google drive or other layers that already have this infrastructure out, to focus on specialization.
+- It would be beneficial to potentially connect groupings of missing people in similar circumstances, similar to Callisto’s sexual assault victim matching model. If someone has a loved one go missing under similar circumstances, it would be potentially beneficial to pair up those searching to make the efforts more effective. This could lead to finding natural hazards in the landscape, commonalities & correlations between cases for law enforcement, etc.
+- There is a highly beneficial relationship here to organizations that help people who are searching for someone who is missing. It provides a distribution channel to a lot of different non-profits, and could be a very interesting partnership opportunity.
+- There’s definitely a dimension of mass disappearances that can be tracked using this. I’m not sure where this thread will land, but it seems important to keep the door open to find out.
+
+---
+
+As the base, I see this as a tool that would let people make connections across leads, places, time, and documentation. It would be the ‘connective’ tissue on top the search, that handles the adminstrative layer. In an ideal world, the location of the user and the location of the leads would produce a pathwork of paperwork and procedure for the user.
+
+The documentation portion would allow someone to upload different documents and link them to events, or to mark them as submitted within the paperwork path.
+
+At the heart is event mapping: someone can create items in a timeline and organize information, photos, people, social media information, and other unknown pieces. This timeline being sharable and viewable for multiple people would reduce the admin burden, and give a main thread of truth for everyone to work from.
+
+The social media component is the most unclear, yet the most promising: posts about the missing person can be imported and managed through the platform.
+
+The opportunity here is to create a specialized moderation layer between the person searching and the internet, and to reduce the admin burden by pairing lead comments to events. E.G: If someone comments that Layla was seen at Silver Falls State Park, the comment would be linked to event that happens at Silver Falls and the person who commented would be associated.
+
+The end result: **a tool that takes the leads generated from social media and works to create a sharable timeline around it, and leads to start working through.** By automating this process, saving time could translate into saving lifes — literally. Long term, it could also help reduce paperwork errors, and the burnout experienced by these families who are going through these difficult situations.
+
+---
+
+There’s expansion potentially into a project management tool. This, I’m unsure about. There’s a lot of project management tools that someone can already use, and I don’t imagine there’s a specialization layer here that can be built unless our tool can be ported to law enforcement or another specialized use case. Potentially, automating the creation of new tasks would be helpful — but owning the project management layer (e.g: the underlying logic of the task board) seems redundant.
+
+As mentioned above, there’s a lot of different directions this can take in a group context. Groups of parents often come together to search for their addicted kids in homeless camps, or spouses of politicial dissidents can band together to find out the truth. Mothers particularly in Mexico have used social media to co-ordinate and search for mass graves, at the beheast of the police.
+
+Needless to say, there’s already groups who are out there doing this work — and if this tool becomes reality, it should serve them if they want it. How to make that happen remains unseen, although Callisto has knitted a great solution that could serve as a waypoint.
+
+---
+
+**#3 — Things to fear:**
+
+- **This is the perfect stalking software**. Occasionally, families with runaway kids or abusers can use missing posters in order to locate the whereabouts of their kids or partners. Knowing the line between correct concern & enabling abuse will be very hard.
+- **There should be some sort of verification mechanism for which we know the person is associated with the person involved**, and ideally has escalated the issue to law enforcement. This should be flexible and on a case by case basis, though. Some areas of use (like in corrupt countries where law enforcement has no / perverse incentives to pursue) would not meet this requirement. Balancing the need to verify the use case with the time sensitive nature of this problem will be incredibly tough to implement.
+- In countries where corruption is rampant, or where social media is outlawed or banned, **this would be tricky to figure out how to implement on the tech stack side.** Technically this is a tool for missing persons, but people go missing often for political reasons. Immediately, this makes the security of whatever project this becomes paramount. The solution would probably be a self-hosted solution as a desktop app that has the ability to self-destruct, and is able to be used without social media as a primary component.
+- **There is a lot of scamming and otherwise terrible people who are attracted to this sort of thing.** It would need to be very thorough to roll out or even get approval. People who are searching for loved ones get scammed often, and can become weary or otherwise lash out occasionally. They also really, at the heart of it, are scared and looking for clear answers where there is none. Any product design decisions need to be made with this at the core.
+
+---
+
+I have a lot of research to do to make this palatable, or even workable. I’m keeping my notes open here in case anyone comes across this and would like to pick this up, or provide more clarity to the situation. Let me know if this is something.
+
+Currently, I’m side-tinkering with this at the moment. But, I think it will become more topical and palpable as time goes on.
