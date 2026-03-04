@@ -6,7 +6,7 @@ import ThemeSwitch from './ThemeSwitch'
 
 const Header = () => {
   let headerClass =
-    'flex items-center w-full justify-between py-14 px-6 rounded-[30px] backdrop-blur-md bg-transparent'
+    'flex items-center w-full justify-between py-3 px-3 rounded-[10px] backdrop-blur-md bg-transparent'
   if (siteMetadata.stickyNav) {
     headerClass += ' sticky top-0 z-50'
   }
@@ -14,7 +14,7 @@ const Header = () => {
   return (
     <header className={headerClass}>
       <Link href="/" aria-label={siteMetadata.headerTitle}>
-        <img src="/static/images/ciwic-logo.png" className="h-20" />
+        <img src="/static/images/ciwic-logo.png" className="h-15" />
       </Link>
 
       <div className="flex items-center space-x-4 leading-5 sm:-mr-6 sm:space-x-6">
