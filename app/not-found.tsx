@@ -9,7 +9,7 @@ export default function NotFound() {
         </h1>
       </div>
       <div className="max-w-md">
-        <p className="mb-4 text-xl leading-normal font-regular md:text-2xl">
+        <p className="mb-4 text-xl leading-normal font-light md:text-2xl">
           Sorry we couldn't find this page.
         </p>
         <p className="mb-8">But dont worry, you can find plenty of other things on our homepage.</p>

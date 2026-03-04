@@ -29,7 +29,7 @@ export default function PostLayout({ content, next, prev, children }: LayoutProp
               <dl>
                 <div>
                   <dt className="sr-only">Published on</dt>
-                  <dd className="text-base leading-6 font-regular text-gray-500 dark:text-gray-400">
+                  <dd className="text-base leading-6 font-light text-gray-500 dark:text-gray-400">
                     <time dateTime={date}>{formatDate(date, siteMetadata.locale)}</time>
                   </dd>
                 </div>
@@ -49,7 +49,7 @@ export default function PostLayout({ content, next, prev, children }: LayoutProp
               </div>
             )}
             <footer>
-              <div className="flex flex-col text-sm font-regular sm:flex-row sm:justify-between sm:text-base">
+              <div className="flex flex-col text-sm font-light sm:flex-row sm:justify-between sm:text-base">
                 {prev && prev.path && (
                   <div className="pt-4 xl:pt-8">
                     <Link
