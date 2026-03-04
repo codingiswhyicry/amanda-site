@@ -88,10 +88,10 @@ export default function ListLayoutWithTags({
           </h1>
         </div>
         <div className="flex sm:space-x-24">
-          <div className="hidden h-full max-h-screen max-w-[280px] min-w-[280px] flex-wrap overflow-auto rounded-sm bg-gray-50 pt-5 shadow-md sm:flex dark:bg-gray-900/70 dark:shadow-gray-800/40">
+          <div className="hidden h-full max-h-screen max-w-[200px] min-w-[200px] flex-wrap overflow-auto rounded-sm bg-gray-50 pt-5 shadow-md sm:flex dark:bg-gray-900/70 dark:shadow-gray-800/40">
             <div className="px-6 py-4">
               {pathname.startsWith('/blog') ? (
-                <h3 className="text-primary-500 font-light uppercase">All Posts</h3>
+                <h3 className="text-primary-500 font-light uppercase">categories</h3>
               ) : (
                 <Link
                   href={`/blog`}
@@ -105,9 +105,9 @@ export default function ListLayoutWithTags({
                   return (
                     <li key={t} className="my-3">
                       {decodeURI(pathname.split('/tags/')[1]) === slug(t) ? (
-                        <h3 className="text-primary-500 inline px-3 py-2 text-sm font-light uppercase">
+                        <h4 className="text-primary-500 inline px-3 py-2 text-sm font-light lowercase">
                           {`${t} (${tagCounts[t]})`}
-                        </h3>
+                        </h4>
                       ) : (
                         <Link
                           href={`/tags/${slug(t)}`}
@@ -131,6 +131,8 @@ export default function ListLayoutWithTags({
                   <li key={path} className="py-5">
                     <article className="flex flex-col space-y-2 xl:space-y-0">
                       <dl>
+                        <hr />
+                        <br />
                         <dt className="sr-only">Published on</dt>
                         <dd className="text-base leading-6 font-light text-gray-500 dark:text-gray-400">
                           <time dateTime={date} suppressHydrationWarning>

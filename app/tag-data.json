@@ -1,5 +1,4 @@
 {
-  "frequently-asked-amandas": 4,
   "mental-health": 3,
   "business": 3,
   "misc": 1,
@@ -7,6 +6,8 @@
   "startups": 8,
   "nonprofits": 2,
   "ethics": 2,
+  "frequently-asked-amandas": 4,
+  "amanda-work": 15,
   "ai": 1,
   "tech-for-good": 4,
   "software": 5,
@@ -17,6 +18,5 @@
   "safety": 1,
   "surveillance": 1,
   "social-media": 1,
-  "most-read": 1,
-  "amanda-work": 15
+  "most-read": 1
 }

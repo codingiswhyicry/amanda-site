@@ -6,13 +6,13 @@ const siteMetadata = {
   description: 'Trying to build software that can save your life.',
   language: 'en-us',
   theme: 'dark', // system, dark or light
-  siteUrl: 'https://tailwind-nextjs-starter-blog.vercel.app',
+  siteUrl: 'https://www.codingiswhyicry.com',
   siteLogo: `${process.env.BASE_PATH || ''}/static/images/logo.png`,
   socialBanner: `${process.env.BASE_PATH || ''}/static/images/twitter-card.png`,
   email: 'amandaksouthworth@gmail.com',
   github: 'https://github.com/codingiswhyicry',
   youtube: 'https://www.youtube.com/@codingiswhyicryatnight',
-  linkedin: 'https://www.linkedin.com',
+  linkedin: 'https://www.linkedin.com/amandasouthworth',
   medium: 'https://medium.com/@codingiswhyicry',
   locale: 'en-US',
   // set to true if you want a navbar fixed to the top

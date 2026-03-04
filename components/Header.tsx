@@ -1,13 +1,12 @@
 import siteMetadata from '@/data/siteMetadata'
 import headerNavLinks from '@/data/headerNavLinks'
-import Logo from '@/data/logo.svg'
 import Link from './Link'
 import MobileNav from './MobileNav'
 import ThemeSwitch from './ThemeSwitch'
-import SearchButton from './SearchButton'
 
 const Header = () => {
-  let headerClass = 'flex items-center w-full justify-between py-10'
+  let headerClass =
+    'flex items-center w-full justify-between py-14 px-6 rounded-[30px] backdrop-blur-md bg-transparent'
   if (siteMetadata.stickyNav) {
     headerClass += ' sticky top-0 z-50'
   }
@@ -15,13 +14,7 @@ const Header = () => {
   return (
     <header className={headerClass}>
       <Link href="/" aria-label={siteMetadata.headerTitle}>
-        <div className="flex items-center justify-between">
-          {typeof siteMetadata.headerTitle === 'string' ? (
-            <div className="hidden h-6 text-2xl font-thin sm:block">{siteMetadata.headerTitle}</div>
-          ) : (
-            siteMetadata.headerTitle
-          )}
-        </div>
+        <img src="/static/images/ciwic-logo.png" className="h-20" />
       </Link>
 
       <div className="flex items-center space-x-4 leading-5 sm:-mr-6 sm:space-x-6">
