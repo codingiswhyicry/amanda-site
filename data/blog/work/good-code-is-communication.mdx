@@ -2,8 +2,82 @@
 title: 'good code is communication.'
 date: '2023-08-05'
 lastmod: '2023-08-05'
-tags: ['startups']
+tags: ['startups', 'technology']
 draft: false
 summary: “”
 images: ['/static/images/twitter-card.png']
 ---
+
+![](https://cdn-images-1.medium.com/max/800/1*jkI2zoemHw7HCetddqkdnQ.png)
+
+Me in the Metaprop office writing this pre-demo day. Hi!
+
+Computer code. It’s surrounded in mystery, shrouded in years of secrecy and supposed to only be knowable by the nerdiest of nerds who can gaze into the crystal ball of computational understanding and look out the other side.
+
+This paradigm of code keeps the public abstracted from one of the most dominant parts of our lives. We have this mythos that computer programmers don’t understand people, they move in silent ways more similar to computers than their human counterparts. By extension, code itself is foreign and requires skills far beyond what a normal person can make happen.
+
+In developer forums, you often have what people claim is the “10x” developer, someone who is so supremely good at coding beyond belief that they allegedly do the work of an entire technical team.
+
+In addition, we have the PR lamination that surrounds our favorite tech products. Tech is supposed to be abstract, this un-knowable thing that we cannot regulate or control. It is supposed to be something done by people who have god-like talent and skill at the terminal, and it’s something that we plebs don’t understand.
+
+I think this is a truth that can infantilize a lot of people: I would like to believe the average person is smart and can understand concepts related to computer science when given the chance. Especially as Gen-Z has shown, computer literacy is more a matter of exposure to specific interfaces and thinking processes, and less of general intelligence. I don’t think people are any dumber or worse for not understanding computers, the same way if I spoke Italian to someone who didn’t speak it.
+
+Gen-Z grew up with computers but has low true computer literacy. Older generations didn’t grow up with computers, but struggle to translate IRL communication into UX cues, leading them to become confused or easily mislead.
+
+The conversation around computers has been something that’s followed me my entire life. When I was young, parents would sic their kids on me when I was working so that I could introduce them to the wonders of code. People would come to me, first and foremost, with computer issues for me to debug.
+
+Current day as a CTO, I struggle with incredibly abstract problems relating to the codebase. Questions like, “Is this the correct cloud provider and do we want a 100k Vercel bill?” to, “how do we best communicate across xyz number of developers?”.
+
+As you dive into the science of codebases, you learn good code revolves around communication. Good code tells you what it does, it tells you why it’s there, it is clear and transparent to the end thing reading it, and it can be re-modified and used in various ways to increase efficiency.
+
+You can tell a lot about a codebase based on a forensic picture of it.
+
+For example, a lot of developers frequently re-writing a specific function or section means that something is wrong under the surface, or that other structural improvements might be needed.
+
+Code that’s occasionally changed on a periodic basis is usually fine. Code that hasn’t been touched by others except for one person typically have knowledge silos, and should be more broadly shared to enable institutional knowledge.
+
+Code that no one uses and doesn’t interact with other code is worthless and takes up space.
+
+The quality of code is determined by how developers communicate with code itself, how code communicates with code, and how developers communicate with each other.
+
+As a baby developer, I used to think about what the views of the software communicated and not at all about the organization of the codebase, or the efficiency of what I’m writing. When I started running dev teams, I had an attitude when people needed information.
+
+I would ask, “what annoying question could an intern ask me about this?”.
+
+I assumed, incorrectly, that software developers at some level would be able to intuitively look at code and to figure out what to build, or what the next steps needed to be. Now, I know I couldn’t be more condescending or far from the truth.
+
+People know what you tell them. How well you talk to your CEO about what they want to build directly translates to a robust dev/ops approach that survives the incident you didn’t see coming. How well your developers meet your requirements depend on if you tell them stuff ahead of time.
+
+My first client integration as CTO, I was building a front-end and overseeing a developer in charge of building out a back-end API layer. This API layer was using RLS in Supabase, which is basically a fancy way of saying “should this person be able to access this chunk of data?“. In passing, I didn’t properly review the code the developer was writing in an effort to polish out the front-end.
+
+When it came time to integration, I gave it the all good and in passing, told Valkyrie that people would be linked to companies based on their email. E.G: If you were Faura, you would only have access by our RLS processes if your domain matched the one of the company.
+
+E.G: [amandaksouthworth@gmail.com](mailto:amandaksouthworth@gmail.com) couldn’t access something that [amanda@faura.us](mailto:amanda@faura.us) could. I thought it was an understandable requirement, but that turned out to not be true. We had to tear out our encoded RLS prior to launch because of a minor communication detail.
+
+A friend asked me for their definition of a moonshot, and I responded, “anything that takes a large number of people to make happen”.
+
+The average person vastly underestimates the struggle of building ANYTHING for a large enough group of people. Budgeting, planning, market research, team recruitment and building: these are all things that require incredibly complex levels of communication and stakeholder management.
+
+The unfortunate truth of the matter is that we need annoying people, because people who are annoying keep shit together. Annoying managers who ping about deadline, annoying customers who ask clarifying questions, annoying developers who ask a question that could be Googled: when it comes to making sure communication is clear, there is no such thing as annoying.
+
+Anything that requires a lot of people needs everyone to be on the same page, and for everyone to understand the role they play in keeping things breathing.
+
+Especially in other sectors like marketing or sales, communication can be a little bit more subjective. One person’s sales tactics may not translate to another account executive.
+
+Computers are efficient because they are good at to the point communication. It’s incredibly unflinching, exacting, and precise. Bugs often happen when we fail to translate what our desires are to the machine, without fully understanding the machine or how we are describing our desires.
+
+Any modern developer can take an adderall and pump out a shit ton of code that would replace an off-shore team with an all nighter. It’s harder to find developers who can communicate to machines, each other, stakeholders, and the greater organization. The 10x developer you might find adored on twitter is actually a nightmare to work with in real life, because their 10x-ness fails to translate into communication skills.
+
+They can ice out other developers and stunt their growth, drop massive PRs that delay launches because a lot of code has to be reviewed at once, they contain institutional knowledge they never write down or pass on: they communicate with code, but not beyond that.
+
+Code, like most things, has varying levels of depth and complexity. Coupled with the fact that the term “code” can refer to a multitude of use cases across a multitude of domains: software development can be incredibly broad and jobs are never quite the same.
+
+What is hard is the communication that is needed to make it happen from high-level concept to execution, or explain a feature to a Grandma, or to tell a 13-year old’s parents that they don’t have an A+ actually because they just inspected element on their report card webpage.
+
+Computer literacy is variable, and will never be at perfect parity. But a world where people are influenced by machines means that people should understand them. I write what I do partially to help people who aren’t from the tech industry to understand what creates the products they see.
+
+If you’re reading this as a software developer: work on your soft skills. They’re the least tended to area for developers and that’s what truly makes one “10x”.
+
+If you’re reading this as someone who is interested in code, or just wants to know more: it’s complex, but it’s knowable. Most of the questions of “why did this happen?” in regards to tech news can be boiled down to communication errors. A server goes offline, someone forgot to communicate a requirement, a piece of code was not programmed to handle an error and therefore dies, and more.
+
+Naively, I thought the hardest part of building a company would be the code involved. Now, I realize my mistake: it’s communicating enough to get people to build it, and understand it.
