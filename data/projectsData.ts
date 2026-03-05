@@ -8,7 +8,7 @@ interface Project {
 const projectsData: Project[] = [
   {
     title: 'Aetheria',
-    description: `Aetheria was an app released in 2020 designed to help people experiencing severe and acute mental illness. `,
+    description: `Aetheria was an app released in 2020 designed to help people experiencing severe and acute mental illness.`,
     imgSrc: '/static/images/avatar.png',
     href: '/blog/projects/aetheria',
   },
@@ -79,7 +79,7 @@ const projectsData: Project[] = [
     href: '/blog/projects/property_self_assessment',
   },
   {
-    title: 'Mentorship / Advisory',
+    title: 'Advisory',
     description: `Other projects that I've helped out on from a mentorship or advisory perspective.`,
     imgSrc: '/static/images/avatar.png',
     href: '/blog/projects/mentorship',
@@ -89,6 +89,12 @@ const projectsData: Project[] = [
     description: `A program launched at Faura in 2026 helped build at Faura to inform homeowners of the risk of their building, and to incentivize them to complete mitigation work.`,
     imgSrc: '/static/images/avatar.png',
     href: '/blog/projects/hrp',
+  },
+  {
+    title: 'Oenone',
+    description: `Oenone is an app being designed to triage and provide care to homeless patients for non-profit street medicine providers.`,
+    imgSrc: '/static/images/avatar.png',
+    href: '/blog/projects/oenone',
   },
 ]
 
