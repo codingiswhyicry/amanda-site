@@ -1,0 +1,143 @@
+---
+title: 'asde-x, and why safety critical software “fails”.'
+date: '2026-04-10'
+lastmod: '2026-04-10'
+tags: ['software', 'aviation']
+draft: false
+summary: “ASDE-X is a runway surveillance program designed to prevent collisions and the FAA spent $550 million to install it at 35 of the busiest airports in the U.S. But on March 22, 2026, ASDE-X partially failed to predict a collision that would have prevented a fire truck from crossing the path of an incoming Air Canada CRJ, killing both pilots. Why did ASDE-X fail? Or, did it fail at all?”
+images: ['/static/images/twitter-card.png']
+---
+
+ASDE-X is a runway surveillance program designed to prevent collisions and the FAA spent $550 million to install it at 35 of the busiest airports in the U.S. But on March 22, 2026, ASDE-X partially failed to predict a collision that would have prevented a fire truck from crossing the path of an incoming Air Canada CRJ, killing both pilots.
+Why did ASDE-X fail? Or, did it fail at all?
+
+---
+
+I'm not sure I've mentioned this, but I moved to New York last July. I also have been not sleeping super well, and waking up probably 3-4 times a night. A bit ago, my dad sent me a Reddit post about the most recent incident at LaGuardia the night it happened. I woke up, stunned.
+
+I open Reddit to what has since become an infamous photo. A CRJ, tipped back, with the nose and cockpit of the plane completely destroyed - as if it hit a wall. The rest of the plane was thankfully intact.
+
+The image of the crash.What we knew then is similar to what we know now: An Air Canada plane was landing at LaGuardia, and was given clearance by ATC to land. When it did land, a firetruck responding to reports of smoke on a United plane at the gate drove across the runway and the plane struck the fire truck.
+
+The 2 pilots of the Air Canada plane died, and one flight attendant was thrown from the plane and survived (albeit with life changing injuries).
+
+---
+
+Over the years, as ATC has been implemented improved and sharpened to meet the demands of the environment, in-air and runway collisions have greatly reduced.
+But, collisions and near misses of all kind have been increasing in the past 5 years, culminating somewhat in the mid-air collision 2025 collision between a helicopter and CRJ plane over the Potomac River.
+
+Radio, which was the majority of the basis of ground control communications, has known problems. These are mostly due to cross-channel communications. For example, if two entities try to transmit over the same frequency, they both cancel each other out - failing to deliver the message without clarity. The most deadly aviation disaster in history - when two 747's collided on Tenerife's runway, was contributed to by a "radio" blackout.
+
+This is often why air traffic controllers ask others to confirm instructions when given, as an extra layer of security. This is also why so much technology and innovation has been poured into airport transportation systems for commercial aviation over the last 100 years.
+But more than radio, it's become incredibly clear how much work and burden is placed on air traffic controllers. A lot of innovation revolves on automating their job, or making the job easier to manage. ASDE-X, which I'll describe more, is the primary way these airports are aiming to do that.
+
+An advertisement from SAAB for their SR-3 radar.On an airport runway, there's so much more to it than meets the eye. It almost is a religious experience to sit next to a runway and to watch the pieces of technology co-ordinate ordinary miracles. Planes can literally land themselves with radio frequencies through ILS (Instrument Landing Systems) that can guide them to safety through fog or rainy weather. ATC has radar, and ASDE-X - a surveillance software that aims to reduce runway collisions.
+
+Technology that enables safer, faster, more reliable aviation communications is the core backbone of why we have the world we do.
+
+So, how did La Guardia's state of the art ASDE-X system "fail" to stop a runway collision?
+
+---
+
+Planes are fast, they are heavy, they are filled with fuel and people. Beyond that, plane crashes not only kill but cost a fuck ton of money. Planes are expensive. The entire industry is mostly oriented around avoiding plane crashes, and the subject of technology has mostly been the answer to that desire.
+
+This is where ASDE-X comes in. ASDE-X is not a software, but essentially an orchestration of specific radars, beacons, sensors, and software that work to surveil a runway and prevent collisions. Its' goal is to show this information to ATC and provide warning alerts when collisions are possible, acting as a "safety net" for the air traffic controllers on duty. In essence, if the human brain is not computing something or realizing a collision may happen, ASDE-X is supposed to.
+
+An example of what an ASDE-X display looks like.The core of any ASDE-X is a surface movement radar, often supplied by Raytheon or SAAB. A VMAT (Vehicle Movement Area Transponder) is the corresponding beacon that could be installed on ground vehicles, so they show up on the system. There's other components that don't appear to be relevant, but what you need to know is that all of this is tied together by software that measures the distance between sensors, and that alerts the relevant parties when something is wrong.
+
+I remember being in the gym watching the NTSB press briefings, where they claimed the ASDE-X system didn't alert the air traffic controller about a collision due to the high number of vehicles in the area, leading to low confidence and a failure to make a prediction. This audibly caused me to say, "What the fuck?" on the treadmill, much to the dismay of everyone else running. Needless to say, I have learned that watching plane crash investigation videos on my incline hike does not make me treadmill friends.
+
+The reason it shocked me and stood out to me, much more than anything else, is that this is a system designed to prevent collisions. Collisions are going to be more likely in systems where there are more entities. And essentially, ASDE-X failed to do the underlying thing it was installed to do, precisely because the exact conditions it was needed to detect in occurred.
+
+The highest risk moment caused the software to fail in a moment where it should have shone. How is that possible? Is there something on the software development side that failed, or was the implementation of ASDE-X flawed?
+
+There's two questions that remain. One is technical, and the other is more philosophical about the role of technology and when it fails to compliment the human brain.
+
+Why, technically, would ASDE-X fail to register a collision possibility in these conditions? Did it actually lead to harm?
+
+Is it acceptable that ASDE-X fails in these conditions? Is it a failure of a system to not act in a moment where most would expect it to rise to the occasion?
+
+- First, let's start with the utility of ASDE-X: to make the controller's life easier, often without them knowing it, by preventing collisions in many angles.
+
+Collisions are multi-faceted. They can occur from ground vehicles, but also from pilots misunderstanding the runways they are supposed to be on, or from controllers relaying incorrect instructions.
+
+ASDE-X not only can control collision alerts, it can connect to some runway lights. A primary concern regarding collisions was not tracking ground vehicles, as happened in LaGuardia, but in preventing pilots from landing on the wrong runaway. Literally, ASDE-X lights the correct path for pilots, and can control 'Runway Entrance Lights' . These are stoplights (like for cars) at junctures that cross the runway, and are connected to ASDE-X. Therefore, when a plane is landing, vehicles are shown red lights which means, as you may guess, bad idea to cross.
+
+Moreover, ASDE-X is mostly designed for the air traffic controllers. Pilots turn on their transponders, and some vehicles have VMATs, but vehicles and pilots are not often given direct alerts that allow them to make evasive maneuvers. It is my understanding that both transponders on vehicles and on planes do not have an interface for operators of these vehicles, but the information is only displayed to ATC or ground control operators.
+
+So, ASDE can:
+
+- Change runway indicators and lights to change behaviors and make sure the correct actions are clear
+- Track planes, as well as some vehicles with VMATs installed. Otherwise, other objects are captured through the surface radar or other beacons.
+- Play collision alerts on the interface directly to the controllers who have ASDE-X maps available to them.
+
+---
+
+Now, let's assess ASDE's behavior in relation to the incident at LaGuardia.
+
+What ASDE-X did in the moments was:
+
+- Changed the runway lights to signal crossing should not occur [CORRECT]
+- Could not show up in the vehicle, as they didn't have transponders [NOT IMPLEMENTED]
+- Did not play a collision alert, as it could not label and recognize ground vehicles as such. [NOT IMPLEMENTED]
+
+CCTV footage from the fire truck crossing shows the REL (runway entrance lights) as being red, signaling to the fire truck it should not have crossed. These RELs are connected to ASDE-X, and properly displayed a warning. But, they are not tied to controller clearances, and are meant to act as a 'second' layer. So, in the event a controller issues a clearance and any runway lights state the opposite, you are supposed to default to the runway lights.
+THLs are another form of lights, different than runway entrance lights, that communicate to objects on the runway.It is still under NTSB investigation if the drivers of the truck understood the lights, or knew not to enter. It is also reported that the vehicles on the ground did not have VMATs installed. So, they did not have individual transponders that would have identified them specifically as ground vehicles moving.
+
+It's worth noting that it was not a singular fire truck, but a mass of vehicles crossing in a line, NONE of them with transponders. This alone would make it incredibly hard for radar equipment alone to detect and identify what is happening correctly - this is exactly why VMATs exist.
+
+It stands to reason that because either the speed, configuration, or mass amount of vehicles was just in some way not right, and the proper thresholds within the ASDE-X software didn't get triggered for that reason.
+
+But, it's important to remember that's why VMATs exist. Transponders exist to supplement data for better decision making, and LaGuardia chose specifically to not install these transponders. Correct transponder configuration is crucial in a surveillance system where it is life or death what objects are, and where they are going.
+
+Runaway lights are supposed to signal to pilots, and to incoming vehicles that the runway is active and they should not cross. The RELs were properly signaling not to cross the runway.
+So, to the question of "did ASDE-X fail?" Both yes, and no.
+
+In my estimation: this is not a software error, this is a configuration and training error on the part of LaGuardia Airport. They did not install VMATs, and for some reason: the firetruck driver(s) to recognize or yield to the RELs.
+
+They also just had (allegedly) one airport controller, who was at the very end of their shift. This speaks volumes to me more about the environment where ASDE-X was working, and where the air traffic controller was managing intense load.
+
+ASDE-X not detecting a collision with a mass of trucks through radar is not a failure of the software, but a limitation of the implementation done by LaGuardia and the culture of complacency that over-leverages personnel and the software they use.
+
+There may be some truth in the fact that ASDE-X should have alerted or have a secondary method for dealing with low confidence alerts, and it may indeed. However, software development has major tradeoffs in regards to this. There is probably a reason the system does not chirp until it is high confidence, as a system that makes more false positives is a system that would lose the trust of the air traffic controllers its' meant to help.
+
+ASDE-X caught the vehicles in the area, but the large amount of them and the fact they were coming from radar data and not categorized as vehicles led to a low confidence prediction, and ultimately: ASDE-X did not believe a collision was imminent because it did not identify the mass as vehicles preparing to cross a runway.
+
+However, ASDE-X RELs still lit up red, indicating the runway was active and there should have been no crossings. It's also worth saying that 9 seconds prior to the collision, the ATC controller said (albeit confusingly) "STOP" to the truck to prevent it from driving into the oncoming runway. It's unknown if this was heard by the firetruck drivers, but it's worth mentioning all other vehicles on the runway did not go forward. It's worth debating if the collision notification would not have changed anything, as the controller already knew and issued a "stop" command to the truck, which it did not catch.
+
+This, especially more than ever, is a critical time to ask if it's acceptable that ASDE-X failed. Outside of aviation, the scale of software and automation is reaching a fever pitch in so many areas. The concerns about the inability of humans to cope with this is mostly assuaged by the idea that software itself can supplement the limits of the human brain.
+Content moderation can be done by automatic flagging software and machine learning models. Self-driving software is safer than human drivers. ASDE-X is going to find and detect collisions where air traffic controllers may not. Is any of this true?
+
+Surveillance is an improvement on safety by margins, as opposed to a systemic focus on safety. Surveillance is not a substitute for systemic safety.
+
+Surveillance is cheaper than true culture change, and that's often why it gets its' power and this fervent need to believe in it and implement it. We need to believe that surveillance, despite the small margins of win, is good enough on the whole to avoid the bigger changes needed to keep us truly safe.
+
+Sometimes, surveillance is not enough - especially when implemented in contexts of budgets, high stress, and high cognitive demand. It may save the day, but it will not hold the line. A tourniquet does not hold an amputated limb on, so why would we expect an poorly implemented ASDE-X surveillance system to hold up an exhausted controller managing an emergency already happening?
+
+I do not believe ASDE-X in this instance "failed", I believe it was implemented to solve a problem it never should have been given the burden of.
+
+Personally, I am in the camp that the firetruck drivers were at fault (primarily), and the overwhelm of the controllers / lack of VMAT installation all contributed to this.
+
+Safety is never a fully achieved state. Safety is a constant mindset and end goal that you achieve to strive for, but know you may always come up short.
+
+Safety theoretically is something everyone agrees with in practice, but in the real world, it's a tradeoff. Much like every other quality, when real world implementations look at the characteristics they need to have, safety is on the list of desires. Sometimes, it just is on the list of desires.
+
+In safety-critical cultures, there is the idea of "no single piece". If a single piece of software can fail and lead to a collision, the system was never safe anyways. Any system that can be toppled by a single point of failure is just waiting to be toppled.
+
+---
+
+Note: this essay was written over the course of a month, and is being released prior to the NTSB investigation concluding. I will edit this as more information comes out in the interest of accuracy. I also do not work in aviation, just in software development for a decade. Please correct me if there's information I have missed.
+
+Sources
+Raytheon. ASDE-X System Overview Brochure. Radartutorial.eu. https://www.radartutorial.eu/19.kartei/03.atc/pubs/sr-3-brochure-lr-2-14.pdf
+Wikipedia. Airport Surveillance and Broadcast Systems. https://en.wikipedia.org/wiki/Airport_surveillance_and_broadcast_systems
+Wikipedia. 1991 Los Angeles Runway Collision. https://en.wikipedia.org/wiki/1991_Los_Angeles_runway_collision
+Federal Aviation Administration. Airport Surface Detection Equipment, Model X (ASDE-X). https://www.faa.gov/air_traffic/technology/asde-x
+Radartutorial.eu. ASDE-X: Card Index of Radar Sets - ATC Radars. https://www.radartutorial.eu/19.kartei/03.atc/karte054.en.html
+Saab. FAA Surface Safety Solutions. https://www.saab.com/products/faa-surface-safety-solutions
+Federal Aviation Administration. FAA Upgrades Wrong Surface Alert Technology. Medium/FAA. https://medium.com/faa/faa-upgrades-wrong-surface-alert-technology-6041988dce6e
+MIT Lincoln Laboratory. Surveillance Improvement Algorithms for Airport Surface Detection Equipment Model X (ASDE-X) at Dallas-Fort Worth Airport. https://www.ll.mit.edu/r-d/publications/surveillance-improvement-algorithms-airport-surface-detection-equipment-model-x
+Wikipedia. Airport Surface Detection Equipment. https://en.wikipedia.org/wiki/Airport_surveillance_and_broadcast_systems#Airport_Surface_Detection_Equipment
+NPR. Aviation Close Calls on Runways Are Increasing, NTSB Warns. June 7, 2024. https://www.npr.org/2024/06/07/nx-s1-4993947/aviation-close-calls-runways-planes-ntsb
+Federal Aviation Administration. Runway Incursions. https://www.faa.gov/airports/runway_safety/resources/runway_incursions
+FreeFlight Systems. VMAT - Vehicle Movement Area Transponder. https://freeflightsystems.com/portfolio/vmat/
