@@ -1,5 +1,5 @@
 @import 'tailwindcss';
-@plugin "@tailwindcss/forms";
+@plugin '@tailwindcss/forms';
 @plugin '@tailwindcss/typography';
 @source '../node_modules/pliny';
 @custom-variant dark (&:where(.dark, .dark *));
@@ -7,25 +7,26 @@
 /* Core theme configuration */
 @theme {
   /* Font families */
-  --font-sans: var(--font-exo), ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
-    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  --font-sans:
+    var(--font-exo), ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol', 'Noto Color Emoji';
 
   /* Colors */
   /* Copied from https://tailwindcss.com/docs/theme#default-theme-variable-reference */
 
   --color-*: initial;
-  --color-sequim: #C1C5FF;
-  --color-ice: #AEB5C3;
-  --color-frost: #EBEEF5;
+  --color-sequim: #c1c5ff;
+  --color-ice: #aeb5c3;
+  --color-frost: #ebeef5;
   --color-black: #000;
   --color-white: #fff;
 
   /* Cool blue-gray scale anchored at ice (#AEB5C3) and frost (#EBEEF5) */
   --color-gray-50: #f8f9fb;
-  --color-gray-100: #EBEEF5; /* frost */
+  --color-gray-100: #ebeef5; /* frost */
   --color-gray-200: #d0d5e4;
   --color-gray-300: #b8c0d2;
-  --color-gray-400: #AEB5C3; /* ice */
+  --color-gray-400: #aeb5c3; /* ice */
   --color-gray-500: #8891a5;
   --color-gray-600: #636c82;
   --color-gray-700: #444c60;
@@ -35,7 +36,7 @@
 
   /* Primary scale anchored at sequim (#C1C5FF) */
   --color-primary-300: #d6d9ff;
-  --color-primary-400: #C1C5FF; /* sequim */
+  --color-primary-400: #c1c5ff; /* sequim */
   --color-primary-500: #a8adff;
   --color-primary-600: #8b91ff;
 
@@ -44,7 +45,6 @@
   --line-height-12: 3rem;
   --line-height-13: 3.25rem;
   --line-height-14: 3.5rem;
-
 
   /* Z-index values */
   --z-60: 60;
@@ -137,11 +137,18 @@
     }
   }
 
+  :where(.dark) .prose a {
+    color: var(--color-white);
+    &:hover {
+      color: var(--color-sequim);
+    }
+  }
+
   .prose-invert {
     & a {
-      color: var(--color-sequim);
+      color: var(--color-white);
       &:hover {
-        color: var(--color-frost);
+        color: var(--color-sequim);
       }
       & code {
         color: var(--color-sequim);
@@ -162,7 +169,7 @@
 }
 
 .footnotes {
-  @apply mt-12 border-t border-ice pt-8 dark:border-sequim;
+  @apply border-ice dark:border-sequim mt-12 border-t pt-8;
 }
 
 .data-footnote-backref {
