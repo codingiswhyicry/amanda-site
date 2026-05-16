@@ -1,3 +1,4 @@
+import Image from '@/components/Image'
 import Link from '@/components/Link'
 import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
@@ -11,6 +12,22 @@ export default function Home({ posts }) {
     <>
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
         <div className="space-y-2 pt-6 pb-8 md:space-y-5">
+          <Image
+            src="/static/images/headers/landing-page-desktop.png"
+            alt=""
+            width={3000}
+            height={1500}
+            priority
+            className="hidden h-auto w-full md:block"
+          />
+          <Image
+            src="/static/images/headers/landing-page-mobile.png"
+            alt=""
+            width={1497}
+            height={3000}
+            priority
+            className="h-auto w-full md:hidden"
+          />
           <h1 className="text-3xl leading-9 font-thin tracking-tight text-gray-900 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14 dark:text-gray-100">
             amanda southworth
           </h1>
