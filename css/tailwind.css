@@ -4,12 +4,23 @@
 @source '../node_modules/pliny';
 @custom-variant dark (&:where(.dark, .dark *));
 
+@font-face {
+  font-family: 'Departure Mono';
+  src:
+    url('/static/fonts/DepartureMono-Regular.woff2') format('woff2'),
+    url('/static/fonts/DepartureMono-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* Core theme configuration */
 @theme {
   /* Font families */
   --font-sans:
     var(--font-exo), ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
     'Segoe UI Symbol', 'Noto Color Emoji';
+  --font-display: 'Departure Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
 
   /* Colors */
   /* Copied from https://tailwindcss.com/docs/theme#default-theme-variable-reference */
@@ -61,6 +72,10 @@
   color utility to any element that depends on these defaults.
 */
 @layer base {
+  h3 {
+    font-family: var(--font-display);
+  }
+
   html:not(.dark) body {
     background-image: url('/static/images/lightmode.bg.png');
     background-size: cover;
