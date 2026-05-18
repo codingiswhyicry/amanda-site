@@ -11,14 +11,14 @@ export default function Home({ posts }) {
   return (
     <>
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
-        <div className="space-y-2 pt-6 pb-8 md:space-y-5">
+        <div className="space-y-2 pt-6 pb-8 text-center md:space-y-5">
           <Image
             src="/static/images/headers/landing-page-desktop.png"
             alt=""
-            width={3000}
+            width={2000}
             height={1500}
             priority
-            className="hidden h-auto w-full md:block"
+            className="mx-auto hidden h-auto w-full md:block"
           />
           <Image
             src="/static/images/headers/landing-page-mobile.png"
@@ -26,13 +26,20 @@ export default function Home({ posts }) {
             width={1497}
             height={3000}
             priority
-            className="h-auto w-full md:hidden"
+            className="mx-auto h-auto w-full md:hidden"
           />
           <h1 className="text-3xl leading-9 font-thin tracking-tight text-gray-900 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14 dark:text-gray-100">
             amanda southworth
           </h1>
-          <p className="text-lg leading-7 font-light text-gray-500 dark:text-gray-400">
-            {siteMetadata.description}
+          <h2 className="text-lg leading-9 font-thin tracking-tight text-gray-900 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14 dark:text-gray-100">
+            trying to build software that will save your life
+          </h2>
+          <p className="mx-auto max-w-3xl text-lg leading-7 font-light text-gray-500 dark:text-gray-400">
+            i [develop/design/build], and help [startups/non-profits/tech] that changes lives.
+          </p>
+          <p className="mx-auto max-w-3xl text-lg leading-7 font-light text-gray-500 dark:text-gray-400">
+            i love software, space, computers, planes and select pieces of technology - nyc
+            currently.
           </p>
         </div>
         <ul className="divide-y divide-gray-200 dark:divide-gray-700">
