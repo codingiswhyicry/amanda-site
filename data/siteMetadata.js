@@ -1,8 +1,8 @@
 /** @type {import("pliny/config").PlinyConfig } */
 const siteMetadata = {
-  title: 'codingiswhyicry',
+  title: 'amanda southworth',
   author: 'Amanda Southworth',
-  headerTitle: 'codingiswhyicry',
+  headerTitle: 'amanda southworth | trying to build software that can save your life',
   description: 'Trying to build software that can save your life.',
   language: 'en-us',
   theme: 'dark', // system, dark or light

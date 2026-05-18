@@ -1,5 +1,6 @@
 import projectsData from '@/data/projectsData'
 import Card from '@/components/Card'
+import Image from 'next/image'
 import { genPageMetadata } from 'app/seo'
 
 export const metadata = genPageMetadata({ title: 'Projects' })
@@ -8,14 +9,14 @@ export default function Projects() {
   return (
     <>
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
-        <div className="space-y-2 pt-6 pb-8 md:space-y-5">
-          <h1 className="text-3xl leading-9 font-light tracking-tight text-gray-900 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14 dark:text-gray-100">
-            work
-          </h1>
-          <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
-            Software, products, tiny homes, companies, and other things I have made.
-          </p>
-        </div>
+        <Image
+          src="/static/images/headers/work.png"
+          alt=""
+          width={1500}
+          height={500}
+          priority
+          className="h-auto w-full"
+        />
         <div className="container py-12">
           <div className="-m-4 flex flex-wrap">
             {projectsData.map((d) => (
