@@ -27,6 +27,7 @@
 
   --color-*: initial;
   --color-sequim: #c1c5ff;
+  --color-goth-blueberry: #353647;
   --color-ice: #aeb5c3;
   --color-frost: #ebeef5;
   --color-black: #000;
@@ -95,12 +96,12 @@
   ::before,
   ::backdrop,
   ::file-selector-button {
-    border-color: var(--color-sequim, currentColor);
+    border-color: var(--color-goth-blueberry, currentColor);
   }
 
   a,
   button {
-    outline-color: var(--color-sequim);
+    outline-color: var(--color-goth-blueberry);
   }
 
   a:focus-visible,
@@ -134,10 +135,10 @@
     & a {
       color: var(--color-black);
       &:hover {
-        color: var(--color-sequim);
+        color: var(--color-goth-blueberry);
       }
       & code {
-        color: var(--color-sequim);
+        color: var(--color-goth-blueberry);
       }
     }
     & :where(h1, h2) {

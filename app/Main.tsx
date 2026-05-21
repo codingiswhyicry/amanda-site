@@ -31,15 +31,10 @@ export default function Home({ posts }) {
           <h1 className="text-3xl leading-9 font-thin tracking-tight text-gray-900 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14 dark:text-gray-100">
             amanda southworth
           </h1>
-          <h2 className="text-lg leading-9 font-thin tracking-tight text-gray-900 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14 dark:text-gray-100">
-            trying to build software that will save your life
-          </h2>
           <p className="mx-auto max-w-3xl text-lg leading-7 font-light text-gray-500 dark:text-gray-400">
-            i [develop/design/build], and help [startups/non-profits/tech] that changes lives.
-          </p>
-          <p className="mx-auto max-w-3xl text-lg leading-7 font-light text-gray-500 dark:text-gray-400">
-            i love software, space, computers, planes and select pieces of technology - nyc
-            currently.
+            trying to build software that will save your life. i [develop/design/build], and help
+            [startups/non-profits/tech] that changes lives. i love software, space, computers,
+            planes and select pieces of technology - nyc currently.
           </p>
         </div>
         <ul className="divide-y divide-gray-200 dark:divide-gray-700">
