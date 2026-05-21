@@ -19,7 +19,7 @@ export default function AuthorLayout({ children, content }: Props) {
             src="/static/images/headers/about.png"
             alt=""
             width={1500}
-            height={500}
+            height={350}
             priority
             className="h-auto w-full"
           />
