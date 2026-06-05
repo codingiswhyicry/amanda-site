@@ -1,17 +1,18 @@
 {
+  "frequently-asked-amandas": 4,
   "lists": 8,
   "ethics": 2,
   "ai": 1,
   "startups": 12,
   "business": 4,
-  "software": 10,
+  "software": 11,
   "aviation": 2,
-  "tech-for-good": 6,
+  "tech-for-good": 7,
   "society": 5,
   "technology": 4,
   "mental-health": 6,
+  "safety": 2,
   "faura": 2,
-  "safety": 1,
   "artificial-intelligence": 1,
   "surveillance": 1,
   "hardware": 1,
@@ -23,6 +24,5 @@
   "misc": 1,
   "tiny-house": 1,
   "nonprofit": 1,
-  "frequently-asked-amandas": 4,
   "amanda-work": 16
 }
