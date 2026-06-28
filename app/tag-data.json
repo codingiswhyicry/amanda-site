@@ -1,4 +1,6 @@
 {
+  "startups": 13,
+  "business": 5,
   "technology": 5,
   "safety": 3,
   "tech-for-good": 7,
@@ -8,8 +10,6 @@
   "mental-health": 6,
   "personal": 9,
   "nonprofits": 2,
-  "startups": 12,
-  "business": 4,
   "frequently-asked-amandas": 4,
   "surveillance": 1,
   "astra-labs": 4,
