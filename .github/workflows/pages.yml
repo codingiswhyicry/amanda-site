@@ -39,6 +39,9 @@ jobs:
           EXPORT: 1
           UNOPTIMIZED: 1
           BASE_PATH: ${{ steps.configurepages.outputs.base_path }}
+          # .env is gitignored, so the GA measurement ID has to be supplied here for
+          # the deployed build. It is public by design (it ships in the page HTML).
+          NEXT_PUBLIC_GOOGLE_ANALYTICS_ID: G-DXYKPJGX5H
       - uses: actions/upload-pages-artifact@v3
         with:
           path: ./out
