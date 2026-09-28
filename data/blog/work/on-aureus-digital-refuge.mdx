@@ -1,0 +1,136 @@
+---
+title: 'on aureus - creating a digital refuge.'
+date: '07-07-2022'
+lastmod: '07-07-2022'
+tags: ['startups', 'astra labs']
+draft: false
+summary: 'Building a design system to standardize development at Astra Labs.'
+images: ['/static/images/twitter-card.png']
+---
+
+This is the start of a series of essays I'm writing for each Astra resource. The other essays will be released as the resources get closer to launch.
+
+I've always struggled with language and communication. Sometimes, things seem as simple as just saying the words you know. But, often times - it just doesn't match. There are some sensations, emotions, or reactions that can't really be translated into a form that other people understand.
+
+This especially occurs in sides of extreme emotion, or a specific sensation unique to an experience. For me, this happens daily. For those of you who don't know, I (Amanda) have autism. The ways autism presents looks different in each person, but my autism strongly presents through a) hyper-empathy issues, b) sensory processing issues, and c) communication issues.
+
+In my first year of high school, I had a crush on a boy in my physics class. I had just finished developing my first app (AnxietyHelper) the summer before, and it gave me a framework for communicating things in a way that I couldn't through spoken words or other forms of socialization. Part of that sensory processing aspect is that specific emotions feel incredibly big and overwhelming to me.
+
+I feel a lot around neglect, abandonment, fear, trauma, love, hope, and humanity. Most people might feel like those are big emotions too - but these emotions dominate my life in a way for most people that they wouldn't. I cry almost instantly thinking about robots and other forms of computer friends. I obsess over human suffering, to a point that's actively detrimental to my own mental health.
+
+I seek out details of accidents, failures, and faults to purposefully learn what went wrong so that I don't repeat it. When I was a kid and went camping in Yellowstone, I purchased a book there called "Death in Yellowstone", and each area we went to, I proudly read out to the car who had died there and how. I thought I was being helpful to stop our vacation from going awry, but others thought otherwise.
+
+Friends often remark about my empathy being a massive issue, especially because the work I do directly attaches to that empathy. Albeit painful for me, the way I learn is by massive amounts of suffering - whether my own or by learning the fates of others.
+
+And that level of empathy is incommunicable to others, in a way that's painful for me. It feels incredibly juvenile and naive to say, "I really enjoyed going to a specific Pho restaurant, however - they keep their fish in a curved tank that's too small for it and the fish bust its' lip and once I went in there and I made eye contact with the fish and then I broke into tears because I felt as though physically I had been shocked and I couldn't make that feeling stop without doing something to help it, and there was nothing I could do to help it."
+
+That level of empathy is incommunicable, and often times the big emotions I feel can be incommunicable as well. I currently have "low-verbal" autism. I can, and do verbally speak regularly, but verbally speaking is not my preferred method of communication.
+
+Particularly, I enjoy long-form essays and writing (and public speaking) because it gives me a spotlight to convey my thoughts in a iterated structure that I can't often accomplish with verbal communication without sounding like I'm just speaking over everyone else. But - I cannot speak unless it is scheduled and prepared for. E.G: If someone calls me out of nowhere to discuss a small problem, I cannot do that. I also cannot respond to people if I didn't prepare for additional communication to happen.
+
+It's not that my brain doesn't have the words, it's that my brain can't cognitively process putting those words out there. I can't physically describe that emotion - but I can program it.
+
+So, what did I do to communicate to my crush? I built him an app for Christmas with a bunch of puns, jokes, and pick up lines in it. It showed me that there was a way to do something about these emotions I felt without verbally saying them in a way that I continued doing through the rest of my work.
+
+---
+
+When people view Astra through a traditionally capitalist / corporation / non-profit lens, I feel as though they fail to see a crucial component of it. Although I am obviously biased, to me - Astra is not a company, or a 501(c)3, or a specific product. Astra is a way for me and others to take the suffering we see others dealing with, or that we ourselves deal with, and to create software to help it.
+
+In my head, Astra's future is akin to a network of software that provides free social services in many different areas - that's why we don't operate like a traditional non/for-profit.
+
+Astra is a distribution channel. And Aureus is how we create the things we distribute - at scale.
+
+For example, taking Aetheria - Aetheria was made because I had a hard time finding specialized tools for more complex / acute cases of mental disorders compared to the other options on the market, which were geared towards a broader and more generalized user base. Therefore, Aetheria was made to provide free tools to people who weren't being catered to in the market.
+
+Coming up with those ideas is easy, but Astra also has a set of ethics, values, design constraints, and more. So, translating an idea into an actual Astra resource is what most people would call "a giant pain in the ass". The constraints that Astra has are for the safety of the users, and are there for a good reason - however, we also have a fully volunteer team and don't have any employees. Enforcing all of those constraints and values across a team of volunteers with varying levels of involvement is incredibly hard.
+
+For people that are not into programming, I'll use a cake metaphor. Let's imagine Astra is a cake shop that make cakes for people with highly dangerous food sensitivities, and we had a lot of recipes and rules in the kitchen as to not kill our customers. To make a cake before Aureus required someone to go through each recipe and read it, and then to make each of the cake components from scratch.
+
+To make a cake after Aureus is akin to copy and pasting ingredients that are pre-made for you. Instead of making the cake from scratch, you bake the cake from a box of cake mix, and a pre-made icing can. The cake is still delicious, and still adheres to the higher standards to make sure the customers are happy, and it saves everyone a bunch of time in the process - more cakes all around.
+
+So, what is Aureus in technical terms? It's a design system library designed to be used as the basis of any Astra resource. Aureus takes in specific variables, images, colors, and settings, and then generates buttons, views, and functionality for that specific resource.
+
+Aureus also handles a lot of the important functionality that is key to making something an Astra resource - it holds the safety settings, developer contact / legal information, data permissions that the developer needs, and more. That way, when Astra wants to build a resource, we use Aureus to build it faster, for more people, and safer.
+
+![](/static/images/blog/on-aureus/aureus-poster.png)
+
+---
+
+I'll show you an example of how Aureus works with one of our farther down the line projects - Seon.
+
+Every Astra resource gets populated with an AureusResource object, that contains styling, developer, and navigation information.
+
+What styling looks like:
+![](/static/images/blog/on-aureus/aureus-branding.png)
+
+This sets the gradients, colors, images, and logos for light mode and dark mode styles. This tells Aureus how to look.
+
+---
+
+What resource information looks like:
+![](/static/images/blog/on-aureus/aureus-information.png)
+
+This sets the name, mission, safety settings that a user can enable (if applicable), developer contact information, data permissions, and other legal jargon. This helps developers make sure the necessary metadata and language is within the resource, and that the user is set up for success with everything they need.
+
+---
+
+What resource navigation looks like:
+![](/static/images/blog/on-aureus/aureus-navigation-tree.png)
+
+This is where you set items that are linked to in pre-built Aureus page templates. For example, the Onboarding template links to the 3 onboarding pages below. This tells Aureus where to take users when they want to go to a specific thing.
+
+Ta-da! You have an Astra resource that you can start building with now. Permissions handled, custom safety features, pre-populated template pages, and branding done - all with the incredibly expansive support of Flutter.
+
+So, what does the generated onboarding process look like for Seon now? (Note: boxes with an X in them are icons and not a bug, Flutter just doesn't render icons until it's time to package everything up and share it)
+
+---
+
+This is Seon's landing page. It's specifically made for the user to be able to learn more about the app in their own time, and to choose when they're ready to onboard. This is to make sure the users feel comfortable onboarding when they want to, and to make sure they can get a feel for the resource before using it.
+![](/static/images/blog/on-aureus/seon-landing-page.png)
+
+---
+
+This is a data consent page. This view is automatically generated by Aureus given the specific data permission items the developer wanted in ResourceInformation. Once you opt in, a regular system notification will pop up asking for your consent again.
+![](/static/images/blog/on-aureus/data-opt-in.png)
+
+---
+
+This video shows something called a CoreTool in Aureus. CoreTools are parts of the resources that actually do the things that help a user - like fill out an incident log, complete an Aetheria tool, or schedule a new routine. Every CoreTool takes metadata information, and then specific tool templates. From those tool templates, Aureus generates a complete beginning to end flow for the user that shows an introduction page, the tool itself, a review, and then a next steps / cooldown page. Everything in the video has been generated by Aureus through these 30 lines of code.
+
+<div className="not-prose" style={{ position: 'relative', paddingBottom: '56.25%', height: 0 }}>
+  <iframe
+    src="https://youtube.com/shorts/A95OryWW8E0?si=k6B4k3MR6mo6f3vb"
+    title="YouTube video player"
+    style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', border: 0 }}
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerPolicy="strict-origin-when-cross-origin"
+    allowFullScreen
+    loading="lazy"
+  />
+</div>
+
+---
+
+This is a genuinely exciting thing for me as a developer: I've spent a lot of time in my life going through accident investigation reports, bug reports, reading, and researching about issues to build Astra to be as safe as it can.
+
+It still has a long way to go (as shown by the fact it's still heavily in beta), but in terms of a resource - Aureus is genuinely something that would have changed the trajectory of my life as a younger developer. I cannot imagine how many more things I would have built, how many more people Astra could have reached.
+
+And in the future, I want others to have access to Aureus. Visibility of pain isn't enough without the autonomy for those affected to stop it from happening again. Aureus is currently open-source, and will be available for non-profit organizations (and projects) to license to use in the future. In the years that I've been working, so many people have asked Astra (or me) to build their app idea, or to help out their non-profits. That's impossible for a number of reasons, but Aureus marks the start of a shift in that conversation. I can't build it for you, but here's a free tool for you to use to build it yourself.
+
+On our manifesto, we wrote "there is no one person, organization, or figure that's going to fix everything" (or something like that). I disagree with the cult of personality that tends to develop around tech founders. It creates the idea that they are infallible, or uniquely positioned to solve humanity's problems alone. It also removes and discredits the work of the people underneath them who often dedicate their careers at great cost to themselves.
+
+I myself have experienced a lot, but that doesn't mean I can build for everything. There's experiences I can never have, and parts of pain that I can never experience - no matter how much I try to learn about it. In that sense, I also don't feel it's correct for me to be leading the reins on projects that I am not personally affected by.
+
+Hopefully, Aureus is a way for me to pass that power to someone else who has experience to allow them to realize their own idea and lead their own organizations and movements.
+
+---
+
+I think the hallmark of a creation is how it affects your day to day life. As I mentioned above, my hyper-empathy problems impact my health. My way that I direct my autism is through systems. Systems of what to wear, what to eat, what to listen to, and what to do. For a long time, a system for processing that suffering and creating something out of it was a system I had in my head, but never had tangibly.
+
+So, what is Aureus? Aureus (to me) is that system - a method of non-verbal communication that I can use to properly communicate and act on my emotions and their depth. The first one I've found.
+
+To my friends, and to any person who uses them they help me say - "I love you. Here is something I've built to keep you safe. Take it with you wherever you go, and you'll always take me with you when you do."
+
+And most importantly, I hold something that gives me hope that I can go into a future that terrifies me. Aureus is a digital refuge for people like me to create solutions to the things they experience every day. I'm beyond grateful to hold it, and I'm beyond grateful to someday share it with you.
+
+If you want to build something - Aureus will be waiting for you. I'll tell you when to open the door.
